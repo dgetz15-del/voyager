@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ulna AR Test</title>
+    <link rel="stylesheet" href="css/voyager-explorer.min.css">
+    <script src="js/voyager-explorer.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Ulna AR Test</h1>
+    <button onclick="launchAR()">View in AR</button>
+    <voyager-explorer
+        id="voyager"
+        root="scenes/ulna/"
+        document="scene.svx.json"
+        style="display:block; width:100%; height:80vh; position:relative;">
+    </voyager-explorer>
+    <script>
+    function launchAR() {
+        const voyager = document.getElementById("voyager");
+        voyager.enableAR();
+    }
+    </script>
+</body>
+</html>
